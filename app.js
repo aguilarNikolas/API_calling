@@ -28,13 +28,13 @@
 //                     }();
 
 import fetch from "node-fetch";
-import axios from "axios";
+// import axios from "axios";
 
 const makeFetchRequest = async (url) => {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data.data[0].Nation);
+    console.log(data); //.data[0].Nation
     return data;
   } catch (err) {
     console.error("Error: ", err);
